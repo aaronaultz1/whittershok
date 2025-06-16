@@ -1,0 +1,50 @@
+Work Log for Aaron Aultz:
+
+Date | Time Started | Duration | Description 
+
+Sprint 1
+4/28/2025 | 20:00 | 4 hrs | Write Dungeon Layout and Scenarios
+4/29/2025 | 18:00 | 2 hrs | Write Dungeon Scenarios
+4/30/2025 | 12:45 | 1 hrs | Class / Start JSON file import/export
+4/30/2025 | 20:45 | 1 hrs | JSON file import/export
+5/01/2025 | 13:30 | 2 hrs | Write Dungeon Layout and Scenarios / structure file import/export
+5/02/2025 | 09:30 | 4 hrs | Debug JSON import/export/save// Create Load inventory, Exit Game, Save, Load Quests functions
+5/03/2025 | 20:30 | 2 hrs | Code hollow rooms and test functionality of room parameters
+5/04/2025 | 22:00 | 1 hrs | Complete logic for Eastern Orchard area
+5/05/2025 | 12:45 | 1 hrs | Class / Test room movement with item and quest flags
+5/06/2025 | 16:30 | 4 hrs | Write quest logic, begin coding witch combat sequence
+5/06/2025 | 24:00 | 3 hrs | Add twilight grove and dire wolf pines areas / test room logic
+5/07/2025 | 12:45 | 1 hrs | Review sprint one and reorganize sprint two
+5/07/2025 | 18:00 | 1 hrs | Begin implementing companion functionality
+5/09/2025 | 20:00 | 4 hrs | Begin developement for combat structure within the game 
+
+Sprint 2
+5/12/2025 | 12:45 | 1 hrs | Class / update exit and death function to reload properly
+5/13/2025 | 23:00 | 1 hrs | Review sprint priorities 
+5/14/2025 | 12:45 | 1 hrs | Class / fix shop logic, fix exit game and death logic/ begin adding combat code
+5/15/2025 | 17:00 | 2 hrs | Play test, update enemies, weapons, armor, quest items, and items/ start building Hunter's Cabin area.
+5/19/2025 | 12:45 | 1 hrs | Class / combat logic
+5/21/2025 | 12:45 | 3 hrs | Class / combat logic
+
+Sprint 3
+5/28/2025 | 12:45 | 1 hrs | Class (MVP Minimal Viable Product)/ update area functionality 
+6/02/2025 | 12:45 | 1 hrs | Class (database) / display area exits and handle user input per area.
+6/04/2025 | 12:45 | 1 hrs | Class (JSON files) / add cave entrance area
+6/04/2025 | 20:00 | 1 hrs | Add tunnels area and Phantom encounter
+6/05/2025 | 19:00 | 5 hrs | Build world map and reorganize item/game logic
+6/06/2025 | 10:00 | 3 hrs | Add quests to empty areas, build more item/game logic
+6/07/2025 | 08:00 | 1 hrs | Build Abandoned Lumber Camp logic
+
+Sprint 4
+6/09/2025 | 12:45 | 1 hrs | Class / work on Abandoned Lumber Camp logic
+6/10/2025 | 19:00 | 1 hrs | Abandoned Lumber Camp Logic
+6/11/2025 | 12:45 | 2 hrs | Class (JSON files) / finish abandoned lumber camp logic / fix eastern orchard quest logic
+6/12/2025 | 14:30 | 1 hrs | Implement signet pass at North Gate / Build The Tunnels logic
+6/16/2025 | 12:45 | 1 hrs | Class (networking) / Build The Tunnels logic
+
+
+to do:
+- the tunnels (and complete quest with reward)
+- Dire Wolf pines (and complete quest with reward)\
+- Secret Stash of the grave robber (find mirror to defeat the witch with)
+- Forest Entrance (add for when you return to the witch without mirror, with mirror) / tannanbark?
