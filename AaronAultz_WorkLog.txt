@@ -48,3 +48,5 @@ to do:
 - Dire Wolf pines (and complete quest with reward)\
 - Secret Stash of the grave robber (find mirror to defeat the witch with)
 - Forest Entrance (add for when you return to the witch without mirror, with mirror) / tannanbark?
+- Update save function logic to verify slot is between 1 and 3
+- Figure out how to create dynamic save folder path for the game saves
