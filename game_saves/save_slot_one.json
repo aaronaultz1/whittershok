@@ -1,0 +1,157 @@
+{
+    "name": "Lumi",
+    "gold": 5,
+    "quest_log": [
+        {
+            "title": "Return The Wizard Staff",
+            "description": "Elvis the wizard needs his Staff, stolen by the Old Hag. Something strange is happening.",
+            "status": "Active"
+        },
+        {
+            "title": "Howl You Help Me",
+            "description": "Wyatt needs fresh wolf pelts fast for the upcoming winter sales.",
+            "status": "Active"
+        },
+        {
+            "title": "Shovel Trouble",
+            "description": "An old man needs a new shovel to dig up a misplaced body.",
+            "status": "Completed"
+        },
+        {
+            "title": "Find the Bug Net",
+            "description": "Benny Boy needs a bug net to catch his favorite bugs.",
+            "status": "Completed"
+        },
+        {
+            "title": "A Favor for Flavor",
+            "description": "Henry the Squire is in a bind. Deliver the letter to the executioner at the gallows immediately!",
+            "status": "Completed"
+        },
+        {
+            "title": "A Riveting Repair Job",
+            "description": "Find enough large timbers to help Sir Digglescoff repair the Broken Bridge.",
+            "status": "Completed"
+        },
+        {
+            "title": "The Grave Robber's Stash",
+            "description": "The old man who staged as a graveyard caretaker has a hidden stash somewhere in the forest.",
+            "status": "Active"
+        },
+        {
+            "title": "Remembering The Sacred Order",
+            "description": "Earl needs you to hand out these fliers in the Town Center.",
+            "status": "Active"
+        }
+    ],
+    "inventory": [
+        "Spoon",
+        "Mango Beetles",
+        "Sharpening Stone",
+        "Shiny Saw",
+        "Royal Signet"
+    ],
+    "shop_inventory": {
+        "Shovel": 25,
+        "Apple Pie": 10,
+        "Broken Dagger": 7
+    },
+    "location": "forest_entrance",
+    "world_state": {
+        "Town Center": {
+            "visited": true
+        },
+        "Bazaar": {
+            "visited": true
+        },
+        "The Croftward": {
+            "visited": true
+        },
+        "The Gallows": {
+            "visited": true
+        },
+        "Northern Streets": {
+            "visited": true
+        },
+        "City Hall": {
+            "visited": true,
+            "failed_visited": false,
+            "success_visited": true
+        },
+        "The Graveyard": {
+            "visited": true,
+            "sad_woman": true
+        },
+        "Wizard Tower": {
+            "visited": true,
+            "staff": false,
+            "tablet": false
+        },
+        "The Barracks": {
+            "visited": true,
+            "signet": false
+        },
+        "The Keep Entrance": {
+            "visited": true,
+            "invited": false
+        },
+        "North Gate": {
+            "visited": true
+        },
+        "East Gate": {
+            "visited": true
+        },
+        "South West Gate": {
+            "visited": true
+        },
+        "Eastern Orchard": {
+            "visited": true,
+            "bennyboy": true
+        },
+        "Abandoned Lumber Camp": {
+            "visited": true,
+            "wood_taken": false,
+            "clear_path": true
+        },
+        "Angel Crossing": {
+            "visited": true,
+            "bridge_built": true
+        },
+        "Windshire Chapels": {
+            "visited": true,
+            "fliers": false
+        },
+        "Southern Outskirts": {
+            "visited": false
+        },
+        "Forest Entrance": {
+            "visited": true,
+            "witch_defeated": false
+        },
+        "The Abandoned Hut": {
+            "visited": false
+        },
+        "Twilight Grove": {
+            "visited": false,
+            "fountain": false
+        },
+        "Dire Wolf Pines": {
+            "visited": false
+        },
+        "Hunter's Cabin": {
+            "visited": false
+        },
+        "Cave Entrance": {
+            "visited": false
+        },
+        "The Tunnels": {
+            "visited": false,
+            "monster_defeated": false
+        },
+        "The Barren Ridge": {
+            "visited": false
+        },
+        "Hollowpine Outpost": {
+            "visited": false
+        }
+    }
+}

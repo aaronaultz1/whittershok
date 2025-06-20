@@ -41,6 +41,7 @@ Sprint 4
 6/11/2025 | 12:45 | 2 hrs | Class (JSON files) / finish abandoned lumber camp logic / fix eastern orchard quest logic
 6/12/2025 | 14:30 | 1 hrs | Implement signet pass at North Gate / Build The Tunnels logic
 6/16/2025 | 12:45 | 1 hrs | Class (networking) / Build The Tunnels logic
+6/18/2025 | 12:45 | 1 hrs | Class (AI and the entry level job shift) / playtest and debug
 
 
 to do:

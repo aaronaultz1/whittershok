@@ -339,6 +339,7 @@ def run_game_title_menu(state):
         print("Invalid choice. Try again.")
 
 def show_inventory(state):
+    clear()
     inventory = state.get_inventory()
     print("\n--- Inventory ---")
     if not inventory:
@@ -443,9 +444,10 @@ Elvis
 (P.S. Don't tell anyone I contacted you. Also, bring a spoon.)
 
 [pause]
-It’s strange. Wizards are usually too busy muttering at scrolls or accidentally exploding sheep to ask favors of others—especially from someone as aggressively average as you.
+It’s strange. Wizards are usually too busy muttering at scrolls or accidentally exploding sheep to ask favors of others—especially 
+from someone as aggressively average as you.
 
-You’re not strong. You’re not clever. People don’t dislike you—they just don’t often remember you exist. You’re also, notably, the reigning loser of Apple Cart Racing—a children’s game. Played by actual children.
+You’re not strong. You’re not clever. People don’t dislike you—they just don’t often remember you exist.
 
 But never mind all that. Your backstory is short, your socks don’t match, and destiny apparently doesn’t care.
 
