@@ -14,6 +14,7 @@ os.makedirs(FOLDER_PATH, exist_ok=True)
 def clear():
     os.system('cls' if os.name == 'nt' else 'clear') #Clears on both Windows and Mac
 
+
 class GameState:
     def __init__(self):
         self.name = ""
@@ -29,7 +30,7 @@ class GameState:
         self.gold = 0
         self.quest_log = []
         self.inventory = ["Spoon"]
-        self.location = "forest_entrance"
+        self.location = "prelude"
         self.shop_inventory = {"Bug Net": 5, "Shovel": 25, "Apple Pie": 10, "Broken Dagger": 7, "Sharpening Stone": 20}
         self.world_state = {
         
@@ -121,7 +122,6 @@ class GameState:
         },
         "Dire Wolf Pines":{
             "visited": False,
-            "wolves_killed": False
         },  
         "Hunter's Cabin": {
             "visited": False,
@@ -290,6 +290,8 @@ class GameState:
     def set_world_state(self, new_world_state):
         self.world_state = new_world_state
 
+
+
     def scroll_typewriter(self, text):
         # Dictionary to handle substitutions like player name
         substitutions = {
@@ -364,6 +366,7 @@ def show_quest_log(state):
 
     input("Press Enter to return...")
 
+
 def prompt_player_action(state, allowed_directions=None):
     if allowed_directions is None:
         allowed_directions = {}
@@ -380,7 +383,7 @@ def prompt_player_action(state, allowed_directions=None):
             
             for dir_key, dest in allowed_directions.items():
                 dest_name = dest.replace("_", " ").title()
-                print(f" - {dir_key.title()} ({dest_name})")
+                print(f" - {dest_name} ({dir_key.title()})")
 
             print()
         else:
@@ -1715,122 +1718,37 @@ You enter into the Old Hag's hut for the first time. Looking around, you find th
 
 def dire_wolf_pines(state):
     world_state = state.get_world_state()
-    location_state = world_state.get("Dire Wolf Pines", {})
-    visited = location_state.get("visited", False)
-    wolves_killed = location_state.get("wolves_killed", False)
+    location_state = world_state.get("Forest Entrance", {})
+    not_visited = location_state.get("visited", False)
     has_bow = "Hunting Bow" in state.get_inventory()
     clear()
     
     print(f"Location: Dire Wolf Pines\n\n")
-    if not visited and not wolves_killed: #If you enter for the first time
-        state.scroll_typewriter("""
-You find yourself in an area with very tall trees. You hear a wolf cry in the distance. And then another one, [pause]closer.
+    if not_visited: #If you enter for the first time
+        state.scroll_typewriter("""You find yourself in an area with very tall trees. You hear a wolf cry in the distance. And then another one, [pause]closer.
 Before you have time to react, there are three, barefanged wolves slowly approaching you, because you are their next meal.""")
         location_state["visited"] = True  # Update visited flag
         input("\n\n\nPress ENTER to continue")
         if has_bow:
-            state.scroll_typewriter("""
-You draw your hunting bow with a speed and confidence that suggests you've done this before—once, at summer camp, between s'mores and a deeply questionable talent 
-show. Three arrows fly in quick succession, each finding a wolf's chest with unsettling accuracy. They collapse mid-snarl. You exhale, relieved. Apparently, that 
-archery merit badge wasn't a complete waste of time… unlike the canoeing one, which ended in a mild drowning.""")
-            location_state["wolves_killed"] = True 
-            state.add_to_inventory("Wolf Pelts")
-
-            print("\n\nINVENTORY UPDATED")
-
-            # ----- Movement or Other Actions -----
-            input("\n\nPress enter to continue\n")
-            available_directions = {
-                "north": "Hollowpine Outpost",
-                "south": "Forest Entrance",
-                "west": "Cave Entrance"
-            }
-            return prompt_player_action(state, available_directions)
+            state.scroll_typewriter("""You whip out your hunting bow and quickly release an arrow in each of the wolves chests, each
+dropping to the ground. Thank goodness you got the archery merit badge last summer!""")
         else:
-            state.scroll_typewriter("""
-The dire wolves are far too fast, and their teeth appear disturbingly well-maintained. You consider standing your ground for about half a second, then remember you 
-once sprained your wrist opening a jar of pickles. Close-combat is too deadly. Strategic retreat it is!""")
-            # ----- Movement or Other Actions -----
-            input("\n\n\nPress enter to continue\n")
-            available_directions = {
-                "south": "Forest Entrance"
-            }
-            return prompt_player_action(state, available_directions)
-        
-    elif visited and not wolves_killed: 
-        state.scroll_typewriter("""
-The towering trees are familiar now—less mysterious, still unreasonably tall. You hear a wolf cry echo through the woods. Then another, closer this time.
-You sigh. Of course. It's never just birdsong and a quiet stroll.
-Before you can even hesitate about the direction you had chosen to pursue, three familiar-looking wolves emerge from the brush, baring their teeth.
-                                
-One of them actually stops, cocks its head, and you swear you can hear the unspoken thought: “Seriously? You again?”
-Apparently, running away last time wasn't enough. Now you're back. And somehow, they seem more insulted than hungry.""")
-        
-        input("\n\n\nPress ENTER to continue\n")
-        if has_bow:
-            while True:
-                clear()
-                user_input = input("1) Use your hunting bow\n2) RETREAT!\nACTION (1/2): ")
-                
-                if user_input == "1":
+            state.scroll_typewriter("""The dire wolves are too swift, their fangs too sharp for close combat. You are forced to flee!""")
+            action = "flee"
+            return action
+    else: # If you have already defeated the wolf pack
+        state.scroll_typewriter("You return to the familiar area, where you were attacked by the wolves.")
 
-                    state.scroll_typewriter("""
-You draw your hunting bow with a speed and confidence that suggests you've done this before—once, at summer camp, between s'mores and a deeply questionable talent 
-show. Three arrows fly in quick succession, each finding a wolf's chest with unsettling accuracy. They collapse mid-snarl. You exhale, relieved. Apparently, that 
-archery merit badge wasn't a complete waste of time… unlike the canoeing one, which ended in a mild drowning.""")
-                    location_state["wolves_killed"] = True 
-                    state.add_to_inventory("Wolf Pelts")
-
-                    print("\n\nINVENTORY UPDATED")
-
-                    # ----- Movement or Other Actions -----
-                    input("\n\nPress enter to continue\n")
-                    available_directions = {
-                        "north": "Hollowpine Outpost",
-                        "south": "Forest Entrance",
-                        "west": "Cave Entrance"
-                    }
-                    return prompt_player_action(state, available_directions)
-                elif user_input == "2":
-                    state.scroll_typewriter("""
-The dire wolves are far too intimidating, and their teeth appear disturbingly well-maintained. You considered standing your ground for about half a second, then remember you 
-once sprained your wrist opening a jar of pickles. Strategic retreat it is!""")
-                    
-                    # ----- Movement or Other Actions -----
-                    input("\n\n\nPress enter to continue\n")
-                    available_directions = {
-                        "south": "Forest Entrance"
-                    }
-                    return prompt_player_action(state, available_directions)
-                else:
-                    print("INVALID INPUT. Please try again.")
-                    time.sleep(1)
-            
-        else:
-            state.scroll_typewriter("""
-The dire wolves are far too fast, and their teeth appear disturbingly well-maintained. You consider standing your ground for about half a second, then remember you 
-once sprained your wrist opening a jar of pickles. Close-combat is too deadly. Strategic retreat it is!""")
-            # ----- Movement or Other Actions -----
-            input("\n\n\nPress enter to continue\n")
-            available_directions = {
-                "south": "Forest Entrance"
-            }
-            return prompt_player_action(state, available_directions)
-        
     
-    elif visited and wolves_killed:
-        state.scroll_typewriter("""
-You return to the familiar clearing, quieter now—emptied of the snarls and snapping jaws that once greeted you. The tall trees stand like silent witnesses, and the 
-only thing watching you this time is the wind, threading through the underbrush where three predators used to prowl.""")
-        # ----- Movement or Other Actions -----
-        input("\n\n\nPress enter to continue\n")
-        available_directions = {
-            "north": "Hollowpine Outpost",
-            "south": "Forest Entrance",
-            "west": "Cave Entrance"
-        }
-        return prompt_player_action(state, available_directions)
-    
+    # ----- Movement or Other Actions -----
+    input("\n\n\nPress enter to continue\n")
+    available_directions = {
+        "north": "Hollowpine Outpost",
+        "south": "Forest Entrance",
+        "west": "Cave Entrance"
+    }
+    return prompt_player_action(state, available_directions)
+
 def twilight_grove(state):
     world_state = state.get_world_state()
     location_state = world_state.get("Twilight Grove", {})
@@ -1921,7 +1839,6 @@ confused, like you just skipped a vital plot point.[pause]
         "west": "Forest Entrance"
     }
     return prompt_player_action(state, available_directions)
-
 #under construction
 def hunters_cabin(state):
     world_state = state.get_world_state()

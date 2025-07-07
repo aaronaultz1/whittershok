@@ -6,25 +6,46 @@
             "title": "Return The Wizard Staff",
             "description": "Elvis the wizard needs his Staff, stolen by the Old Hag. Something strange is happening.",
             "status": "Active"
+        },
+        {
+            "title": "Find the Bug Net",
+            "description": "Benny Boy needs a bug net to catch his favorite bugs.",
+            "status": "Active"
+        },
+        {
+            "title": "A Riveting Repair Job",
+            "description": "Find enough large timbers to help Sir Digglescoff repair the Broken Bridge.",
+            "status": "Active"
+        },
+        {
+            "title": "Howl You Help Me",
+            "description": "Wyatt needs fresh wolf pelts fast for the upcoming winter sales.",
+            "status": "Active"
+        },
+        {
+            "title": "Shovel Trouble",
+            "description": "An old man needs a new shovel to dig up a misplaced body.",
+            "status": "Active"
         }
     ],
     "inventory": [
-        "Spoon"
+        "Spoon",
+        "Bug Net",
+        "Shovel"
     ],
     "shop_inventory": {
-        "Bug Net": 5,
         "Shovel": 25,
         "Apple Pie": 10,
         "Broken Dagger": 7,
         "Sharpening Stone": 20
     },
-    "location": "town_center",
+    "location": "the_barracks",
     "world_state": {
         "Town Center": {
-            "visited": false
+            "visited": true
         },
         "Bazaar": {
-            "visited": false
+            "visited": true
         },
         "The Croftward": {
             "visited": false
@@ -41,7 +62,7 @@
             "success_visited": false
         },
         "The Graveyard": {
-            "visited": false,
+            "visited": true,
             "sad_woman": false
         },
         "Wizard Tower": {
@@ -50,7 +71,7 @@
             "tablet": false
         },
         "The Barracks": {
-            "visited": false,
+            "visited": true,
             "signet": false
         },
         "The Keep Entrance": {
@@ -61,14 +82,14 @@
             "visited": false
         },
         "East Gate": {
-            "visited": false
+            "visited": true
         },
         "South West Gate": {
             "visited": false
         },
         "Eastern Orchard": {
-            "visited": false,
-            "bennyboy": false
+            "visited": true,
+            "bennyboy": true
         },
         "Abandoned Lumber Camp": {
             "visited": false,
@@ -76,7 +97,7 @@
             "clear_path": false
         },
         "Angel Crossing": {
-            "visited": false,
+            "visited": true,
             "bridge_built": false
         },
         "Windshire Chapels": {
