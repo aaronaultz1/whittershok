@@ -24,12 +24,12 @@ class GameState:
         self.shop_inventory = {}
         self.world_state = {}
 
-    def create_new(self):
+    def create_new(self, state):
         self.name = input("Enter character name: ")
         self.gold = 0
         self.quest_log = []
         self.inventory = ["Spoon"]
-        self.location = "forest_entrance"
+        self.location = "prelude"
         self.shop_inventory = {"Bug Net": 5, "Shovel": 25, "Apple Pie": 10, "Broken Dagger": 7, "Sharpening Stone": 20}
         self.world_state = {
         
@@ -162,9 +162,13 @@ class GameState:
 
     def load_from_slot(self, slot):
         file_path = self._get_file_path(slot)
-
+        if 1 > slot or slot > 3:
+            print(f"{slot} is not between 1-3. Please try again.")
+            time.sleep(2)
+            return False
         if not os.path.exists(file_path):
             print(f"No save file found in slot {slot}.")
+            time.sleep(2)
             return False
 
         with open(file_path, "r") as f:
@@ -322,8 +326,21 @@ def run_game_title_menu(state):
     choice = input("Select an option: ")
 
     if choice == "1":
-        state.create_new()
+        state.create_new(state)
         time.sleep(1)
+        while True:
+            slot = input("Enter save slot (1-3): ")
+            if not slot.isdigit() or int(slot) not in [1, 2, 3]:
+                print("Invalid slot. Please enter a number between 1 and 3.")
+                continue
+            elif slot in state.world_state:
+                print("Slot already taken. Please choose a different slot.")
+                continue
+            else:
+                slot = int(slot)
+                state.save_to_slot(slot)
+                time.sleep(2)
+                break
         clear()
         return True
     elif choice == "2":
@@ -473,8 +490,6 @@ def town_center(state):
     print(f"Location: Town Center\n\n")
     if not location_state.get("visited", False):
         print()
-        slot = int(input("Enter save slot (1-3): "))
-        state.save_to_slot(slot)
         time.sleep(1)
         clear()
         print(f"Location: Town Center\n\n")

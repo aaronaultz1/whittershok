@@ -1,6 +1,6 @@
 {
-    "name": "Bob",
-    "gold": 0,
+    "name": "Joey",
+    "gold": 5,
     "quest_log": [
         {
             "title": "Return The Wizard Staff",
@@ -21,7 +21,7 @@
     "location": "town_center",
     "world_state": {
         "Town Center": {
-            "visited": false
+            "visited": true
         },
         "Bazaar": {
             "visited": false
@@ -98,7 +98,8 @@
             "fountain": false
         },
         "Dire Wolf Pines": {
-            "visited": false
+            "visited": false,
+            "wolves_killed": false
         },
         "Hunter's Cabin": {
             "visited": false
