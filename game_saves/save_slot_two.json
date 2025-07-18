@@ -1,6 +1,6 @@
 {
-    "name": "Bob the Great",
-    "gold": 5,
+    "name": "Joey",
+    "gold": 500000,
     "quest_log": [
         {
             "title": "Return The Wizard Staff",
@@ -15,53 +15,20 @@
         {
             "title": "Shovel Trouble",
             "description": "An old man needs a new shovel to dig up a misplaced body.",
-            "status": "Completed"
-        },
-        {
-            "title": "The Grave Robber's Stash",
-            "description": "The old man who staged as a graveyard caretaker has a hidden stash somewhere in the forest.",
-            "status": "Active"
-        },
-        {
-            "title": "A Favor for Flavor",
-            "description": "Henry the Squire is in a bind. Deliver the letter to the executioner at the gallows immediately!",
-            "status": "Completed"
-        },
-        {
-            "title": "Remembering The Sacred Order",
-            "description": "Earl needs you to hand out these fliers in the Town Center.",
-            "status": "Completed"
-        },
-        {
-            "title": "Find the Bug Net",
-            "description": "Benny Boy needs a bug net to catch his favorite bugs.",
-            "status": "Completed"
-        },
-        {
-            "title": "A Riveting Repair Job",
-            "description": "Find enough large timbers to help Sir Digglescoff repair the Broken Bridge.",
-            "status": "Completed"
-        },
-        {
-            "title": "Save Evelyn",
-            "description": "Lordrisk the Hunter needs your help to save his daughter.",
             "status": "Active"
         }
     ],
     "inventory": [
-        "Spoon",
-        "Holy Stone of Banishing",
-        "3 Mango Beetles",
-        "Sharpening Stone",
-        "Shiny Saw",
-        "Royal Signet"
+        "Spoon"
     ],
     "shop_inventory": {
+        "Bug Net": 5,
         "Shovel": 25,
         "Apple Pie": 10,
-        "Broken Dagger": 7
+        "Broken Dagger": 7,
+        "Sharpening Stone": 20
     },
-    "location": "north_gate",
+    "location": "the_graveyard",
     "world_state": {
         "Town Center": {
             "visited": true
@@ -70,82 +37,82 @@
             "visited": true
         },
         "The Croftward": {
-            "visited": true
+            "visited": false
         },
         "The Gallows": {
-            "visited": true
+            "visited": false
         },
         "Northern Streets": {
-            "visited": true
+            "visited": false
         },
         "City Hall": {
-            "visited": true,
+            "visited": false,
             "failed_visited": false,
-            "success_visited": true
+            "success_visited": false
         },
         "The Graveyard": {
             "visited": true,
-            "sad_woman": true
+            "sad_woman": false
         },
         "Wizard Tower": {
-            "visited": true,
+            "visited": false,
             "staff": false,
             "tablet": false
         },
         "The Barracks": {
-            "visited": true,
+            "visited": false,
             "signet": false
         },
         "The Keep Entrance": {
-            "visited": true,
+            "visited": false,
             "invited": false
         },
         "North Gate": {
-            "visited": true
+            "visited": false
         },
         "East Gate": {
-            "visited": true
+            "visited": false
         },
         "South West Gate": {
-            "visited": true
+            "visited": false
         },
         "Eastern Orchard": {
-            "visited": true,
-            "bennyboy": true
+            "visited": false,
+            "bennyboy": false
         },
         "Abandoned Lumber Camp": {
-            "visited": true,
+            "visited": false,
             "wood_taken": false,
-            "clear_path": true
+            "clear_path": false
         },
         "Angel Crossing": {
-            "visited": true,
+            "visited": false,
             "bridge_built": false
         },
         "Windshire Chapels": {
-            "visited": true,
+            "visited": false,
             "fliers": false
         },
         "Southern Outskirts": {
             "visited": false
         },
         "Forest Entrance": {
-            "visited": true,
+            "visited": false,
             "witch_defeated": false
         },
         "The Abandoned Hut": {
             "visited": false
         },
         "Twilight Grove": {
-            "visited": true,
-            "fountain": true
+            "visited": false,
+            "fountain": false
         },
         "Dire Wolf Pines": {
-            "visited": true,
+            "visited": false,
             "wolves_killed": false
         },
         "Hunter's Cabin": {
-            "visited": true
+            "visited": false
         },
         "Cave Entrance": {
             "visited": false

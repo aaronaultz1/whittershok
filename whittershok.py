@@ -1599,7 +1599,7 @@ mended bridge, disappearing into the distance in pursuit of the fleeing bandits.
             # ----- Movement or Other Actions -----
             input("\n\n\nPress enter to continue\n")
             available_directions = {
-                "east": "Bandit Camp",
+                "east": "Bandit Camp (Under Construction)",
                 "west": "Eastern Orchard",
             }
             return prompt_player_action(state, available_directions)
@@ -1638,7 +1638,7 @@ mended bridge, disappearing into the distance in pursuit of the fleeing bandits.
         # ----- Movement or Other Actions -----
         input("\n\nPress enter to continue\n")
         available_directions = {
-            "east": "Bandit Camp",
+            "east": "Bandit Camp (Under Construction)",
             "west": "Eastern Orchard",
         }
         return prompt_player_action(state, available_directions)
@@ -1648,7 +1648,7 @@ mended bridge, disappearing into the distance in pursuit of the fleeing bandits.
         # ----- Movement or Other Actions -----
         input("\n\n\nPress enter to continue\n")
         available_directions = {
-            "east": "Bandit Camp",
+            "east": "Bandit Camp (Under Construction)",
             "west": "Eastern Orchard",
         }
         return prompt_player_action(state, available_directions)
